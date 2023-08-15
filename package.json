@@ -1,6 +1,6 @@
 {
-  "name": "sliding-item",
-  "version": "0.0.1",
+  "name": "react-sliding-item",
+  "version": "0.0.0-alpha-4",
   "type": "module",
   "files": [
     "dist"
@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
   },
@@ -19,6 +19,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "peerDependencies": {
+    "framer-motion": "^10.15.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -32,6 +33,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "framer-motion": "^10.15.2",
     "typescript": "^5.1.6",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.5.2"

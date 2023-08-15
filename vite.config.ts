@@ -18,13 +18,7 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
+      external: ["react", "react-dom", "framer-motion", "react/jsx-runtime"],
     },
   },
 });
