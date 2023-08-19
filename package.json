@@ -1,6 +1,26 @@
 {
   "name": "react-sliding-item",
   "version": "0.0.0-alpha-4",
+  "author": {
+    "name": "Alexandru Pavaloi",
+    "url": "https://github.com/iampava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iampava/react-sliding-item"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "slide",
+    "sliding",
+    "component",
+    "customizable",
+    "mobile",
+    "touchscreen",
+    "swipe-to-delete",
+    "swipe-actions"
+  ],
   "type": "module",
   "files": [
     "dist"
