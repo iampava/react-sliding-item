@@ -5,8 +5,7 @@
 `react-sliding-item` is React component for creating mobile-friendly sliding interactions.
 
 
-See it live on CodeSandbox: 
-
+See it live on CodeSandbox: https://codesandbox.io/p/sandbox/epic-hofstadter-957rvm
 
 ## Installation
 
