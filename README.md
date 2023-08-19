@@ -59,6 +59,41 @@ function App() {
 export default App
 ```
 
+## Exports
+
+This package exports 2 things:
+
+1. A React component called `<SlidingItem>` with the following Prop definition:
+
+```typescript
+type Props =
+  {
+    /** Configuration options for the sliding item. */
+    options?: {
+      /** Width of the left/right element in pixels. */
+      max?: number;
+      /** How far the user has to drag before the element is considered "swiped". This is a numeric value between 0 and `max` and represents pixels. */
+      threshold?: number;
+    };
+    children: React.ReactNode;
+  } & (
+    | {
+      right: JSX.Element;
+      left?: JSX.Element;
+    }
+    | {
+      right?: JSX.Element;
+      left: JSX.Element;
+    }
+    | {
+      right: JSX.Element;
+      left: JSX.Element;
+    }
+  );
+```
+
+2. A function called `resetAnimation` that let's you return to the initial position.
+
 ## Acknowledgements
 
 Code was inspired from this [Devon Govett](https://twitter.com/devongovett)'s tweet: https://twitter.com/devongovett/status/1683882802977312770
