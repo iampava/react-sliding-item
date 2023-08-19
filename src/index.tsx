@@ -92,12 +92,11 @@ const SlidingItem = ({ children, right, left, options }: Props) => {
   return (
     <motion.div
       drag={"x"}
-      className="relative"
       // This adds the `x` CSS variable to the element, which we'll use to
       // calculate the size of left-right sections.
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      style={{ x, "--x": xPx }}
+      style={{ x, "--x": xPx, position: "relative" }}
       dragConstraints={dragConstraints}
       onDragEnd={() => {
         const currentXPosition = x.get();
@@ -125,8 +124,13 @@ const SlidingItem = ({ children, right, left, options }: Props) => {
       {left !== undefined && (
         <div
           ref={leftRef}
-          style={{ width: `max(${max}px, var(--x))` }}
-          className="absolute top-0 right-[100%] h-full flex"
+          style={{
+            top: 0,
+            right: "100%",
+            height: "100%",
+            position: "absolute",
+            width: `max(${max}px, var(--x))`,
+          }}
         >
           {left}
         </div>
@@ -135,8 +139,13 @@ const SlidingItem = ({ children, right, left, options }: Props) => {
       {right !== undefined && (
         <div
           ref={rightRef}
-          className="absolute top-0 left-[100%] h-full flex"
-          style={{ width: `max(${max}px, calc(-1 * var(--x)))` }}
+          style={{
+            top: 0,
+            left: "100%",
+            height: "100%",
+            position: "absolute",
+            width: `max(${max}px, calc(-1 * var(--x)))`
+          }}
         >
           {right}
         </div>
