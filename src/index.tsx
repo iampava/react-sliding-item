@@ -1,5 +1,5 @@
 // Inspiration: https://twitter.com/devongovett/status/1683882802977312770
-import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import {
   motion,
   animate,
@@ -15,31 +15,36 @@ const inertiaTransition: ValueAnimationTransition = {
   bounceDamping: 40,
 };
 
-type Props = PropsWithChildren<
+type Props =
   {
+    /** Configuration options for the sliding item. */
     options?: {
-      // Width of the left/right element in pixels.
+      /** Width of the left/right element in pixels. */
       max?: number;
-
-      // How far the user has to drag before the element is considered "swiped"
-      // This is a numeric value between 0 and `max` and represents pixels.
+      /** How far the user has to drag before the element is considered "swiped". This is a numeric value between 0 and `max` and represents pixels. */
       threshold?: number;
     };
+    children: React.ReactNode;
   } & (
     | {
+      /** The content on the right. Can be optional if `left` is provided. */
       right: JSX.Element;
+      /** The content on the left. Can be optional if `right` is provided. */
       left?: JSX.Element;
     }
     | {
+      /** The content on the right. Can be optional if `left` is provided. */
       right?: JSX.Element;
+      /** The content on the left. Can be optional if `right` is provided. */
       left: JSX.Element;
     }
     | {
+      /** The content on the right. Can be optional if `left` is provided. */
       right: JSX.Element;
+      /** The content on the left. Can be optional if `right` is provided. */
       left: JSX.Element;
     }
-  )
->;
+  );
 
 const SlidingItem = ({ children, right, left, options }: Props) => {
   const leftRef = useRef<HTMLDivElement | null>(null);
@@ -154,6 +159,11 @@ const SlidingItem = ({ children, right, left, options }: Props) => {
   );
 };
 
+/**
+ * Function to be called when you want to reset the item back to it's
+ * original state.
+ * @param e React.MouseEvent<HTMLElement, MouseEvent>
+ */
 const resetAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
   const event = new CustomEvent("resetslide", { bubbles: true });
 
