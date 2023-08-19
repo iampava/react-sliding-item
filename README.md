@@ -18,17 +18,48 @@ npm install react-sliding-item framer-motion
 
 ## Usage
 
-Here's a basic example of how you can use `react-sliding-item`:
+Here's an example that uses TailwindCSS as styling:
 
 ```tsx
+import { SlidingItem, resetAnimation } from 'react-sliding-item'
 
-import { SlidingItem, resetAnimation } from "react-sliding-item";
+function App() {
+  return (
+    <div className='w-64 m-auto mt-20 overflow-hidden'>
+      <SlidingItem
+        left={<button className="bg-gray-500 text-white h-full w-full" onClick={resetAnimation}> More </button>}
+        right={<button className="bg-red-500 text-white h-full w-full"> Delete </button>}
+      >
+        <div className="bg-gray-100 p-2">
+          <h2> Fix vacuum cleaner</h2>
+          <time className="text-gray-500 text-xs"> 10:03 AM</time>
+        </div>
+      </SlidingItem>
+      <SlidingItem
+        left={<button className="bg-gray-500 text-white h-full w-full" onClick={resetAnimation}> More </button>}
+        right={<button className="bg-red-500 text-white h-full w-full"> Delete </button>}
+      >
+        <div className="bg-gray-100 p-2">
+          <h2> Call pet groomer</h2>
+          <time className="text-gray-500 text-xs"> 1:00 PM</time>
+        </div>
+      </SlidingItem>
+      <SlidingItem
+        left={<button className="bg-gray-500 text-white h-full w-full" onClick={resetAnimation}> More </button>}
+        right={<button className="bg-red-500 text-white h-full w-full"> Delete </button>}
+      >
+        <div className="bg-gray-100 p-2">
+          <h2> Restock cleaning suplies</h2>
+          <time className="text-gray-500 text-xs"> 1:30 PM</time>
+        </div>
+      </SlidingItem>
+    </div>
+  )
+}
 
-<SwipableElement
-  right={<button>Remove</Button>}
-  left={<button onClick={resetAnimation}> More </button>}
->
-  <h2> Title </h2>
-  <p> Some text </p>
-</SwipableElement>
+export default App
 ```
+
+## Acknowledgements
+
+Code was inspired from this [Devon Govett](https://twitter.com/devongovett)'s tweet: https://twitter.com/devongovett/status/1683882802977312770
