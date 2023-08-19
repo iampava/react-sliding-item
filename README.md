@@ -7,9 +7,7 @@
 
 See it live on CodeSandbox: https://codesandbox.io/p/sandbox/epic-hofstadter-957rvm
 
-<!-- Video -->
-**Video Demo:**
-https://raw.githubusercontent.com/iampava/react-sliding-item/main/assets/demo.mov
+https://github.com/iampava/react-sliding-item/assets/11327761/2e2330de-0a0f-4955-8b3f-db2ba9792f26
 
 ## Installation
 
