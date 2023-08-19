@@ -7,6 +7,10 @@
 
 See it live on CodeSandbox: https://codesandbox.io/p/sandbox/epic-hofstadter-957rvm
 
+<!-- Video -->
+**Video Demo:**
+https://raw.githubusercontent.com/iampava/react-sliding-item/main/assets/demo.mov
+
 ## Installation
 
 Make sure you have **React** installed in your project before installing `react-sliding-item`. You'll also need to have **framer-motion** as a peer dependency.
