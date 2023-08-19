@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/react-sliding-item) ![npm](https://img.shields.io/npm/dt/react-sliding-item) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`react-sliding-item` is React component for creating mobile-friendly sliding interactions.
+`react-sliding-item` is a headless React component for creating mobile-friendly sliding interactions.
 
 
 See it live on CodeSandbox: https://codesandbox.io/p/sandbox/epic-hofstadter-957rvm
@@ -16,6 +16,8 @@ Make sure you have **React** installed in your project before installing `react-
 ```bash
 npm install react-sliding-item framer-motion
 ```
+
+> NOTE: this is a headless component coming with very little styling needed to correctly position things.
 
 ## Usage
 
